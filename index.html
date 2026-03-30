@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -162,12 +162,6 @@
             font-weight: 700;
             line-height: 1.25;
             letter-spacing: -0.03em;
-        }
-
-        .profile-info .cn {
-            font-weight: 400;
-            font-size: 1.05rem;
-            color: var(--text-secondary);
         }
 
         .profile-info .subtitle {
@@ -476,10 +470,10 @@
             <img src="assets/avatar.jpg" alt="Zefu Lin" class="avatar" width="168" height="168">
         </div>
         <div class="profile-info">
-            <h1>Zefu Lin <span class="cn">（林泽福）</span></h1>
-            <p class="subtitle">Ph.D. Student · Computer Vision &amp; 3D Perception</p>
+            <h1>Zefu Lin <span class="cn">（林泽夫）</span></h1>
+            <p class="subtitle">Ph.D. Student · Embodied Intelligence, World Models &amp; VLA</p>
             <p class="affiliation">
-                <a href="https://www.nju.edu.cn/" target="_blank" rel="noopener">Nanjing University</a>（南京大学）<br>
+                <a href="https://www.nju.edu.cn/" target="_blank" rel="noopener">Nanjing University</a><br>
                 Previously:
                 <a href="https://www.ucas.ac.cn/" target="_blank" rel="noopener">UCAS</a> /
                 <a href="http://www.ia.cas.cn/" target="_blank" rel="noopener">CASIA</a>, CRIPAC
@@ -487,7 +481,7 @@
             <div class="social-links">
                 <a href="mailto:zefu.lin@cripac.ia.ac.cn"><i class="fas fa-envelope"></i> Email</a>
                 <a href="https://github.com/ZefuLin" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://scholar.google.com/citations?user=l04aPSwAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>
+                <a href="https://scholar.google.com/citations?user=l04aPSwAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>
             </div>
         </div>
     </section>
@@ -502,17 +496,15 @@
             where I was affiliated with the Center for Research on Intelligent Perception and Computing
             (<a href="http://cripac.ia.ac.cn/" target="_blank" rel="noopener">CRIPAC</a>),
             <a href="http://www.ia.cas.cn/" target="_blank" rel="noopener">Institute of Automation, Chinese Academy of Sciences (CASIA)</a>.
-            My research focuses on 3D perception and scene understanding for autonomous driving,
-            including BEV perception, 3D occupancy prediction, and visual SLAM.
+            My research focuses on <strong>embodied intelligence</strong> — building agents that perceive, reason, and act in the physical world.
+            I am particularly interested in <strong>world models</strong> for long-horizon prediction and planning, and <strong>vision–language–action (VLA)</strong> systems that connect perception, language, and control for generalizable robot behavior.
         </p>
 
         <h3 style="font-size:.9rem;margin-top:1.35rem;margin-bottom:.45rem;font-weight:600;">Research Interests</h3>
         <div class="tags">
-            <span class="tag">BEV</span>
-            <span class="tag">Occupancy</span>
-            <span class="tag">SLAM</span>
-            <span class="tag">Autonomous Driving</span>
-            <span class="tag">Computer Vision</span>
+            <span class="tag">Embodied Intelligence</span>
+            <span class="tag">World Model</span>
+            <span class="tag">VLA</span>
         </div>
     </section>
 
@@ -528,7 +520,7 @@
             <div class="edu-item">
                 <div class="edu-icon"><i class="fas fa-microscope"></i></div>
                 <div class="edu-info">
-                    <h3>Nanjing University（南京大学）</h3>
+                    <h3>Nanjing University</h3>
                     <p>Ph.D. · 2026 – Present</p>
                 </div>
             </div>
@@ -536,7 +528,7 @@
             <div class="edu-item">
                 <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
                 <div class="edu-info">
-                    <h3>University of Chinese Academy of Sciences（中国科学院大学）</h3>
+                    <h3>University of Chinese Academy of Sciences</h3>
                     <p>M.S. in Artificial Intelligence · 2022 – 2025</p>
                 </div>
             </div>
@@ -544,7 +536,7 @@
             <div class="edu-item">
                 <div class="edu-icon"><i class="fas fa-university"></i></div>
                 <div class="edu-info">
-                    <h3>Huazhong University of Science and Technology（华中科技大学）</h3>
+                    <h3>Huazhong University of Science and Technology</h3>
                     <p>Bachelor's degree · 2018 – 2022</p>
                 </div>
             </div>
@@ -602,7 +594,7 @@
 
     function renderPapers(papers) {
         if (!Array.isArray(papers) || papers.length === 0) {
-            listEl.innerHTML = '<p class="pub-empty">论文列表为空。请在 <code style="font-family:JetBrains Mono,monospace;font-size:.82em">publications/papers.json</code> 中添加条目。</p>';
+            listEl.innerHTML = '<p class="pub-empty">No publications yet. Add entries in <code style="font-family:JetBrains Mono,monospace;font-size:.82em">publications/papers.json</code>.</p>';
             return;
         }
 
@@ -655,7 +647,7 @@
             renderPapers(data);
         })
         .catch(function () {
-            listEl.innerHTML = '<p class="pub-error">无法加载 <code style="font-family:JetBrains Mono,monospace;font-size:.82em">publications/papers.json</code>。若你正在用本地文件直接打开页面，请用本地静态服务器打开站点根目录（GitHub Pages 部署后则正常）。</p>';
+            listEl.innerHTML = '<p class="pub-error">Could not load <code style="font-family:JetBrains Mono,monospace;font-size:.82em">publications/papers.json</code>. Open the site via a local static server (not file://), or deploy to GitHub Pages.</p>';
         });
 })();
 </script>
