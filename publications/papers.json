@@ -2,6 +2,8 @@
   {
     "title": "MCOP: Multi-UAV Collaborative Occupancy Prediction",
     "venue": "ICCV 2025",
+    "year": 2025,
+    "month": 6,
     "authors": "Zefu Lin, Wenbo Chen, Xiaojuan Jin, Yuran Yang, Lue Fan, Yixin Zhang, Yufeng Zhang, Zhaoxiang Zhang",
     "image": "publications/images/MCOP.png",
     "arxiv": "https://arxiv.org/abs/2510.12679",
@@ -11,6 +13,8 @@
   {
     "title": "EmbodiedCoder: Parameterized Embodied Mobile Manipulation via Modern Coding Model",
     "venue": "ICRA 2026",
+    "year": 2026,
+    "month": 1,
     "authors": "Zefu Lin, Rongxu Cui, Chen Hanning, Xiangyu Wang, Junjia Xu, Xiaojuan Jin, Chen Wenbo, Hui Zhou, Lue Fan, Wenling Li, Zhaoxiang Zhang",
     "image": "publications/images/EmbodiedCoder.png",
     "arxiv": "https://arxiv.org/abs/2510.06207",

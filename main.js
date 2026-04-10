@@ -165,8 +165,18 @@
         return '<div class="pub-thumb">' + img + '</div>';
     }
 
+    /* ----- Sort papers by year+month descending ----- */
+    function sortPapers(papers) {
+        return papers.slice().sort(function (a, b) {
+            var ay = a.year  || 0, by = b.year  || 0;
+            var am = a.month || 0, bm = b.month || 0;
+            return (by - ay) || (bm - am);
+        });
+    }
+
     /* ----- Render papers ----- */
     function renderPapers(papers) {
+        papers = sortPapers(papers);
         if (!Array.isArray(papers) || papers.length === 0) {
             listEl.innerHTML = '<p class="pub-empty">No publications yet. Add entries in <code style="font-family:JetBrains Mono,monospace;font-size:.82em">publications/papers.json</code>.</p>';
             return;
